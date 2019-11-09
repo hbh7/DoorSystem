@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Material+Icons');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Roboto Mono', sans-serif;
+}
+#container{
+	display: inline-grid;
+	grid-template-columns: 400px 80px;
+	grid-template-rows: 80px 80px 80px 80px;
+	background-color: midnightblue;
+	cursor: none;
+	user-select: none;
+}
+#container > div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#weatherclock{
+	grid-row-start: 1;
+	grid-row-end: 5;
+	text-align: center;
+	color: white;
+}
+#weather-icon{
+	background: url('shirley.png') no-repeat center;
+	background-size: 64px;
+}
+#weather{
+	font-size: 24px;
+}
+#time{
+	font-size: 48px;
+}
+#date{
+	font-size: 24px;
+}
+.button{
+	background-color: black;
+}
+.button:active{
+	background-color: white;
+	-webkit-tap-highlight-color: white;
+}
+.button i{
+	font-size: 48px;
+}
+#unlock{
+	color: lime;
+}
+#lock{
+	color: red;
+}
+#autolock{
+	color: deepskyblue;
+}
+#sweep{
+	animation: rgb 10s infinite ease-in-out;
+}
+@keyframes rgb{
+	0%{
+		color: red;
+	}
+	33%{
+		color: lime;
+	}
+	66%{
+		color: blue;
+	}
+	100%{
+		color: red;
+	}
+}

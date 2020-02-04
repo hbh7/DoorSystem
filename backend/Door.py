@@ -64,7 +64,7 @@ class Door:
         while self.state == State.SWEEP:
             for i in range(0, iterations):
                 self.unlock_control()
-                time.sleep(1.1)
+                time.sleep(3)
                 self.lock_control()
-                time.sleep(1.1)
+                time.sleep(3)
             self.state = State.NORMAL

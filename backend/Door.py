@@ -32,7 +32,7 @@ class Door:
                     self.lock_control()
                 else:
                     print("Auto lock in " + str(self.lockTimeout-time.time()) + " seconds")
-            time.sleep(60)
+            time.sleep(1)
 
     def lock_control(self):
         print("Lock")
@@ -64,10 +64,7 @@ class Door:
             return
         self.state = State.TIMER
         self.unlock_control()
-        time.sleep(delay)
-        if self.state == State.TIMER:
-            self.lock_control()
-            self.state = State.NORMAL
+        self.lockTimeout = time.time() + delay
 
     def sweep(self, iterations):
         print("Sweep")

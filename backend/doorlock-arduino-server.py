@@ -37,13 +37,13 @@ def unlock():
 
 
 @app.route('/sweep/<int:iterations>')
-def sweep(iterations=10):
+def sweep(iterations=4):
     door.sweep(iterations)
     return "ok"
 
 
 @app.route('/timer/<float:delay>')
-def timer(delay=10):
+def timer(delay=15):
     door.timer(delay)
     return "ok"
 
@@ -62,7 +62,7 @@ def lock_state():
 
 @app.route('/')
 def hello_world():
-    return 'Welcome to the door system!'
+    return 'Hello World!'
 
 
 connect()

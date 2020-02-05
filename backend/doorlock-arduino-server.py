@@ -62,7 +62,7 @@ def lock_state():
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    return 'Welcome to the door system!'
 
 
 connect()
